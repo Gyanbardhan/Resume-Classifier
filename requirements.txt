@@ -1,0 +1,8 @@
+
+
+scikit-learn==1.2.2
+numpy
+pandas
+streamlit
+nltk
+scipy==1.12
