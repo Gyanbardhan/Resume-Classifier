@@ -50,7 +50,7 @@ def main():
     with open("resumeclassifier.pkl", 'rb') as file1:  
         rf = pickle.load(file1)
     st.title('Resume Classifier')
-    uploaded_file = st.file_uploader('Upload Resume', type=['txt','pdf','docx'],key="text")
+    uploaded_file = st.file_uploader('Upload Resume', type=['txt','pdf','docx'])
     if uploaded_file is not None:
         try:
             resume_bytes = uploaded_file.read()
