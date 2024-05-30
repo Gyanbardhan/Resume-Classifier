@@ -52,7 +52,7 @@ def main():
     st.title('Resume Classifier')
     
     #text = st.text_input("Enter your resume", key="text")
-    uploaded_file = st.file_uploader('Upload Resume', type=['txt','pdf','docx'])
+    uploaded_file = st.file_uploader('Upload Resume', type=['txt','pdf','docx'],key="text")
 
     if uploaded_file is not None:
         try:
