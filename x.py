@@ -50,20 +50,9 @@ def main():
     with open("resumeclassifier.pkl", 'rb') as file1:  
         rf = pickle.load(file1)
     st.title('Resume Classifier')
-    col1,col2=st.columns(2)
-    with col1:
-        text = st.text_input("Enter your resume", key="text")
-    with col2:
-        uploaded_file = st.file_uploader('Upload Resume', type=['txt','pdf','docx'],key="text")
     
-        if uploaded_file is not None:
-            try:
-                resume_bytes = uploaded_file.read()
-                text = resume_bytes.decode('utf-8')
-            except UnicodeDecodeError:
-                # If UTF-8 decoding fails, try decoding with 'latin-1'
-                resume_bytes = uploaded_file.read()
-                text = resume_bytes.decode('latin-1')
+    text = st.text_input("Enter your resume", key="text")
+    
     doc={3: 'Frontend Developer',
             0: 'Backend Developer',
             7: 'Python Developer',
